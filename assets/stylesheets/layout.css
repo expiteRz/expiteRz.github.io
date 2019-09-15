@@ -1,14 +1,24 @@
-.bg {
-  /* background: red; */
-  background-color: black;
-}
-
-.navbar-brand {
+/* .navbar-brand {
   font-weight: bold;
-}
-
-#nav_opacity{
+} */
+#nav_opacity {
   background: #FFF;
   opacity: 50%;
   filter: (opacity=50);
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+hr {
+  height: 2px;
+  background-color: lightgrey;
+  width: 60%;
+  border: none;
 }
