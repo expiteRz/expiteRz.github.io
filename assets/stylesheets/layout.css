@@ -1,0 +1,14 @@
+.bg {
+  /* background: red; */
+  background-color: black;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+#nav_opacity{
+  background: #FFF;
+  opacity: 50%;
+  filter: (opacity=50);
+}
