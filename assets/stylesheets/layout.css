@@ -23,6 +23,16 @@ hr {
   border: none;
 }
 
-p{
+#main {
   text-align: center;
+}
+
+.download .left {
+  float: left;
+  width: 50%;
+}
+
+.download .right {
+  float: right;
+  width: 50%;
 }
