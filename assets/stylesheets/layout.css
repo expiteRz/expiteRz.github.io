@@ -3,6 +3,7 @@
 } */
 body{
   padding-top: 70px;
+  font-family: 'Open Sans', 'Sawarabi Gothic' ,sans-serif;
 }
 
 #nav_opacity {
@@ -21,7 +22,7 @@ body{
 }
 
 hr {
-  width: 90%
+  width: 95%
 }
 
 #main {

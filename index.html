@@ -4,11 +4,26 @@
 <head>
   <meta charset="utf-8">
   <title>rz-public</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Sawarabi+Gothic&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/stylesheets/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/stylesheets/layout.css">
   <script src="./assets/javascripts/jquery-3.4.1.min.js"></script>
   <script src="./assets/javascripts/popper.min.js"></script>
   <script src="./assets/javascripts/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('a[href^=#]').click(function() {
+        var speed = 500;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({
+          scrollTop: position
+        }, speed, "swing");
+        return false;
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -71,6 +86,7 @@
         <h2>Download</h2>
         <hr>
         <div class="download">
+          <h4>Custom Tracks</h4>
           <p class="left">
             <a href="http://wiki.tockdom.com/wiki/Cityside_Nature">Cityside Nature</a> <br>
             <a href="http://wiki.tockdom.com/wiki/Nightmare_Cliff">Nightmare Cliff</a>
@@ -79,6 +95,8 @@
             <a href="http://wiki.tockdom.com/wiki/Fortside_Volcano">Fortside Volcano</a> <br>
             <a href="http://wiki.tockdom.com/wiki/Cottonplant_Forest">Cottonplant Forest</a>
           </p>
+          <h4 id="DL-Texture">Texture Hacks</h4>
+          <h4 id="DL-Distribution">Distributions</h4>
         </div>
       </div>
       <div id="Contact">
