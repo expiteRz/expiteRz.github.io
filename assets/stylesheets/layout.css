@@ -1,6 +1,10 @@
 /* .navbar-brand {
   font-weight: bold;
 } */
+body{
+  padding-top: 70px;
+}
+
 #nav_opacity {
   background: #FFF;
   opacity: 50%;
@@ -17,10 +21,7 @@
 }
 
 hr {
-  height: 2px;
-  background-color: lightgrey;
-  width: 60%;
-  border: none;
+  width: 90%
 }
 
 #main {
@@ -35,4 +36,12 @@ hr {
 .download .right {
   float: right;
   width: 50%;
+}
+
+.row-space{
+  margin-bottom: 70px;
+}
+
+.row-last{
+  margin-bottom: 300px;
 }

@@ -13,7 +13,7 @@
 
 <body>
   <div class="bg">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-fixed-up shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
       <div class="container">
         <a class="navbar-brand noselect">rz-public</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false">
@@ -25,8 +25,13 @@
             <li>
               <a class="nav-item nav-link" href="#About">About</a>
             </li>
-            <li>
-              <a class="nav-item nav-link" href="#Download">Download</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Download</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#Download">Custom Tracks</a>
+                <a class="dropdown-item" href="#DL-Texture">Texture Hacks</a>
+                <a class="dropdown-item" href="#DL-Distribution">Distributions</a>
+              </div>
             </li>
             <li>
               <a class="nav-item nav-link" href="#Contact">Contact</a>
@@ -36,7 +41,7 @@
       </div>
     </nav>
     <div class="container noselect" id="main">
-      <div name="About">
+      <div id="About">
         <h2>About</h2>
         <hr>
         <h5>Paran, as known as Rz</h5>
@@ -60,22 +65,23 @@
         <p>
           3 years later, I has been resumed playing osu!.
         </p>
+        <div class="row-space" />
       </div>
-      <div name="Download">
+      <div id="Download">
         <h2>Download</h2>
         <hr>
         <div class="download">
-          <div class="left">
-            Cityside Nature <br>
+          <p class="left">
+            <a href="http://wiki.tockdom.com/wiki/Cityside_Nature">Cityside Nature</a> <br>
             Nightmare Cliff
-          </div>
-          <div class="right">
+          </p>
+          <p class="right">
             Fortside Volcano <br>
             Cottonplant Forest
-          </div>
+          </p>
         </div>
       </div>
-      <div name="Contact">
+      <div id="Contact">
         <h2>Contact</h2>
         <hr>
         <a class="twitter-timeline" data-width="480" data-height="320" data-link-color="#000000" href="https://twitter.com/cY049z?ref_src=twsrc%5Etfw">Tweets by cY049z</a>
