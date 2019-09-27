@@ -88,11 +88,11 @@ hr {
   margin: auto;
 }
 
-.col-sm {
+.col-md {
   padding-bottom: 3vh;
 }
 
-.col-sm a img {
+.col-md a img {
   margin: auto;
   position: relative;
   border-radius: 10px;
