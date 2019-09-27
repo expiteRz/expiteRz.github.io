@@ -29,16 +29,6 @@ hr {
   text-align: center;
 }
 
-.download .left {
-  float: left;
-  width: 50%;
-}
-
-.download .right {
-  float: right;
-  width: 50%;
-}
-
 .row-space {
   margin-bottom: 70px;
 }
@@ -97,3 +87,31 @@ hr {
   border-radius: 5px;
   margin: auto;
 }
+
+.col-sm {
+  padding-bottom: 3vh;
+}
+
+.col-sm a img {
+  margin: auto;
+  position: relative;
+  border-radius: 10px;
+}
+
+/* .col a #active {
+
+  position: absolute;
+  opacity: 0;
+  transition: .3s;
+}
+
+#photo img{
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.col a:hover #active {
+  opacity: 1;
+} */
+
+/*----*/

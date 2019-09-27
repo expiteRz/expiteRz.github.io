@@ -9,24 +9,28 @@
   <link rel="stylesheet" href="./assets/stylesheets/layout.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
   <script src="./assets/javascripts/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript">
+    var img = $("#slideshow").children("img"), // 画像を取得
+      num = img.length, // 画像の数を数える
+      count = 0, // 現在何枚目を表示しているかのカウンター
+      interval = 3000; // 次の画像に切り替わるまでの時間(1/1000秒)
+
+    img.eq(0).addClass("show"); // 最初の画像にshowクラス付与
+
+    setTimeout(slide, interval); // slide関数をタイマーセット
+
+    function slide() {
+      img.eq(count).removeClass("show"); // 現在表示している画像からshowクラスを取り除く
+      count++; // カウンターを一個進める
+      if (count >= num) {
+        count = 0; // カウンターが画像の数より大きければリセット
+      }
+      img.eq(count).addClass("show"); // 次の画像にshowクラス付与
+      setTimeout(slide, interval); // 再びタイマーセット
+    }
+  </script>
   <script src="./assets/javascripts/popper.min.js"></script>
   <script src="./assets/javascripts/bootstrap.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 10) { // 100pxスクロールしていたら上に戻るボタンを表示
-          $(".back-to-top").fadeIn();
-        } else {
-          $(".back-to-top").fadeOut();
-        }
-      });
-      $(".back-to-top").click(function() {
-        $("body,html").animate({
-          scrollTop: 0
-        }, 800); // 800msかけて上に戻る
-      });
-    });
-  </script>
 </head>
 
 <body>
@@ -89,18 +93,34 @@
       <div id="Download">
         <h2>Download</h2>
         <hr>
-        <div class="download">
+        <div>
           <h4>Custom Tracks</h4>
-          <p class="left">
-            <a href="http://wiki.tockdom.com/wiki/Cityside_Nature">Cityside Nature</a> <br>
-            <a href="http://wiki.tockdom.com/wiki/Nightmare_Cliff">Nightmare Cliff</a>
-          </p>
-          <p class="right">
-            <a href="http://wiki.tockdom.com/wiki/Fortside_Volcano">Fortside Volcano</a> <br>
-            <a href="http://wiki.tockdom.com/wiki/Cottonplant_Forest">Cottonplant Forest</a>
-          </p>
+          <div class="row">
+            <div class="col-sm">
+              <a href="http://wiki.tockdom.com/wiki/Cityside_Nature" target="_blank">
+                <img src="./images/csn_0.png"　class="img-fruid">
+                <!-- <img src="./images/csn_2.png" id="active"> -->
+              </a>
+            </div>
+            <div class="col-sm">
+              <a href="http://wiki.tockdom.com/wiki/Fortside_Volcano" target="_blank">
+                <img src="./images/fsv_0.png" class="img-fruid">
+              </a>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-sm">
+              <a href="http://wiki.tockdom.com/wiki/Nightmare_Cliff" target="_blank">
+                <img src="./images/csn_0.png" class="img-fruid">
+              </a>
+            </div>
+            <div class="col-sm">
+              <a href="http://wiki.tockdom.com/wiki/Cottonplant_Forest" target="_blank">
+                <img src="./images/csn_0.png" class="img-fruid">
+              </a>
+            </div>
+          </div>
           <h4 id="DL-Texture">Texture Hacks</h4>
-          <h4 id="DL-Distribution">Distr@ibutions</h4>
+          <h4 id="DL-Distribution">Distributions</h4>
         </div>
       </div>
       <div id="Contact">
