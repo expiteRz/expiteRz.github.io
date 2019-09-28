@@ -1,8 +1,8 @@
 /* .navbar-brand {
   font-weight: bold;
 } */
-html{
-  scroll-behavior: smooth; 
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,6 +17,15 @@ body {
 }
 
 .container {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.navbar{
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -117,39 +126,52 @@ hr {
 .col a:hover #active {
   opacity: 1;
 } */
-
 /*----*/
+@-webkit-keyframes modify {
+  0% {
+    padding-top: 70px;
+    margin-top: -70px;
+  }
 
-@-webkit-keyframes modify{
-      0% { padding-top: 70px; margin-top: -70px; }
-    100% { padding-top: 0; margin-top: 0; }
+  100% {
+    padding-top: 0;
+    margin-top: 0;
+  }
 }
-@keyframes  modify{
-      0% { padding-top: 70px; margin-top: -70px; }
-    100% { padding-top: 0; margin-top: 0; }
+
+@keyframes modify {
+  0% {
+    padding-top: 70px;
+    margin-top: -70px;
+  }
+
+  100% {
+    padding-top: 0;
+    margin-top: 0;
+  }
 }
 
 #About:target {
-    -webkit-animation: modify 0.1s;
-    animation: modify 0.1s;
+  -webkit-animation: modify 0.1s;
+  animation: modify 0.1s;
 }
 
 #Download:target {
-    -webkit-animation: modify 0.1s;
-    animation: modify 0.1s;
+  -webkit-animation: modify 0.1s;
+  animation: modify 0.1s;
 }
 
 #DL-Texture:target {
-    -webkit-animation: modify 0.1s;
-    animation: modify 0.1s;
+  -webkit-animation: modify 0.1s;
+  animation: modify 0.1s;
 }
 
 #DL-Distribution:target {
-    -webkit-animation: modify 0.1s;
-    animation: modify 0.1s;
+  -webkit-animation: modify 0.1s;
+  animation: modify 0.1s;
 }
 
 #Contact:target {
-    -webkit-animation: modify 0.1s;
-    animation: modify 0.1s;
+  -webkit-animation: modify 0.1s;
+  animation: modify 0.1s;
 }
