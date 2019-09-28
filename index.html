@@ -10,24 +10,16 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
   <script src="./assets/javascripts/jquery-3.4.1.min.js"></script>
   <script type="text/javascript">
-    var img = $("#slideshow").children("img"), // 画像を取得
-      num = img.length, // 画像の数を数える
-      count = 0, // 現在何枚目を表示しているかのカウンター
-      interval = 3000; // 次の画像に切り替わるまでの時間(1/1000秒)
-
-    img.eq(0).addClass("show"); // 最初の画像にshowクラス付与
-
-    setTimeout(slide, interval); // slide関数をタイマーセット
-
-    function slide() {
-      img.eq(count).removeClass("show"); // 現在表示している画像からshowクラスを取り除く
-      count++; // カウンターを一個進める
-      if (count >= num) {
-        count = 0; // カウンターが画像の数より大きければリセット
-      }
-      img.eq(count).addClass("show"); // 次の画像にshowクラス付与
-      setTimeout(slide, interval); // 再びタイマーセット
-    }
+    var headerHight = 110; //ヘッダの高さ
+    $("a[href^='#']").click(function() {
+      var href = $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top - headerHight; //ヘッダの高さ分位置をずらす
+      $("html, body").animate({
+        scrollTop: position
+      }, 550, "swing"); //この数値は移動スピード
+      return false;
+    });
   </script>
   <script src="./assets/javascripts/popper.min.js"></script>
   <script src="./assets/javascripts/bootstrap.min.js"></script>
@@ -45,18 +37,18 @@
         <div class="collapse navbar-collapse" id="Navber">
           <ul class="navbar-nav ml-auto">
             <li>
-              <a class="nav-item nav-link" href="#About">About</a>
+              <a class="nav-item nav-link anchor" href="#About">About</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Download</a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#Download">Custom Tracks</a>
-                <a class="dropdown-item" href="#DL-Texture">Texture Hacks</a>
-                <a class="dropdown-item" href="#DL-Distribution">Distributions</a>
+                <a class="dropdown-item anchor" href="#Download">Custom Tracks</a>
+                <a class="dropdown-item anchor" href="#DL-Texture">Texture Hacks</a>
+                <a class="dropdown-item anchor" href="#DL-Distribution">Distributions</a>
               </div>
             </li>
             <li>
-              <a class="nav-item nav-link" href="#Contact">Contact</a>
+              <a class="nav-item nav-link anchor" href="#Contact">Contact</a>
             </li>
           </ul>
         </div>

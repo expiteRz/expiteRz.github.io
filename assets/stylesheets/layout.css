@@ -1,6 +1,10 @@
 /* .navbar-brand {
   font-weight: bold;
 } */
+html{
+  scroll-behavior: smooth; 
+}
+
 body {
   padding-top: 75px;
   font-family: 'Open Sans', 'Sawarabi Gothic', sans-serif;
@@ -115,3 +119,37 @@ hr {
 } */
 
 /*----*/
+
+@-webkit-keyframes modify{
+      0% { padding-top: 70px; margin-top: -70px; }
+    100% { padding-top: 0; margin-top: 0; }
+}
+@keyframes  modify{
+      0% { padding-top: 70px; margin-top: -70px; }
+    100% { padding-top: 0; margin-top: 0; }
+}
+
+#About:target {
+    -webkit-animation: modify 0.1s;
+    animation: modify 0.1s;
+}
+
+#Download:target {
+    -webkit-animation: modify 0.1s;
+    animation: modify 0.1s;
+}
+
+#DL-Texture:target {
+    -webkit-animation: modify 0.1s;
+    animation: modify 0.1s;
+}
+
+#DL-Distribution:target {
+    -webkit-animation: modify 0.1s;
+    animation: modify 0.1s;
+}
+
+#Contact:target {
+    -webkit-animation: modify 0.1s;
+    animation: modify 0.1s;
+}
