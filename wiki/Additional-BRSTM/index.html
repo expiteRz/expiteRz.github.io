@@ -9,28 +9,26 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper.min.js" integrity="sha256-3Iu0zFU6cPS92RSC3Pe4DBwjIV/9XKyzYTqKZzly6A8=" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    function sidebar() {
-      $.ajax({
-        url: "../sidebar.html",
-        cache: false,
-        success: function(html) {
-          document.write(html);
-        }
-      });
-    }
-  </script>
 </head>
 
 <body>
-  <div class="container-fluid">
-    <script type="text/javascript">
-      sidebar();
-    </script>
-    <h1 style="text-align: center">rz-public</h1>
-    <hr>
-    <p style="text-align: center">It's not ready yet.
-    </p>
+  <div class="row">
+    <div class="col-md-2 bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <a class="navbar-bland" href="#">rz-public Wiki</a>
+          <li class="nav-item">
+            <a class="nav-link" href="./Additional-BRSTM">Create Additional BRSTM</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <h1 style="text-align: center">rz-public</h1>
+      <hr>
+      <p style="text-align: center">It's not ready yet.
+      </p>
+    </div>
   </div>
 </body>
 
